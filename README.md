@@ -4,6 +4,7 @@ This is a python unittesting code integrated with jenkins and nginx
 * Jenkins Installed
 * Nginx Installed
 * Domain Name
+* Python3 Installed
 # Step1 
 We write a python script for the UnitTest of our website.
 # Step2
