@@ -1,6 +1,8 @@
 # UnitTest_Jenkins
 This is a python unittesting code integrated with jenkins and nginx
-
+# Prerequsits:
+* Jenkins installed
+* Nginx Installed
 # Step1 
 We write a python script for the UnitTest of our website.
 # Step2
