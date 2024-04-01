@@ -1,0 +1,28 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Run Unit Test') {
+            steps {
+                script {
+                    try {
+                        sh 'python3 test_script.py'
+                    } catch (Exception e) {
+                        currentBuild.result = 'FAILED'
+                        echo "Unit test failed: ${e.message}"
+                        error "Unit test failed"
+                    }
+                }
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo 'Unit test passed!'
+        }
+        failure {
+            echo 'Unit test failed!'
+        }
+    }
+}
